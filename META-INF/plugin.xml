@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+    <id>com.pivasyk.ideaHelpfulPlugins</id>
+    <name>pivasyk - ideaHelpfulPlugins</name>
+    <version>1.0</version>
+    <vendor email="pivasyk@gmail.com">Pivasyk</vendor>
+
+    <description><![CDATA[
+      Convert your SQL query to PHP String like<br>
+      "SELECT \n".<br>
+      "  'HELLO WORLD' \n".<br>
+      "FROM DUAL";
+      ]]></description>
+
+    <change-notes><![CDATA[
+
+            ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="107.105"/>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <group id="RealignerActionGroup" text="Aligner" popup="false">
+            <action id="convertAction" class="com.pivasyk.ideaPlugin.actions.sqlToPhpString.SqlToStringAction"
+                    text="Convert to PHP String" description="Convert to PHP String">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt L"/>
+            </action>
+            <add-to-group group-id="EditMenu" anchor="last"/>
+        </group>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+</idea-plugin>
