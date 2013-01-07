@@ -32,9 +32,17 @@
 
     <actions>
         <group id="RealignerActionGroup" text="Aligner" popup="false">
-            <action id="convertAction" class="com.pivasyk.ideaPlugin.actions.sqlToPhpString.SqlToStringAction"
-                    text="Convert to PHP String" description="Convert to PHP String">
+            <action id="SqlToStringAction" class="com.pivasyk.ideaPlugin.actions.SqlToStringAction"
+                    text="Paste as PHP String" description="Paste as PHP String">
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt L"/>
+            </action>
+            <!--<action id="StringToSqlAction" class="com.pivasyk.ideaPlugin.actions.StringToSqlAction"-->
+                    <!--text="Copy as SQL" description="Copy as SQL String">-->
+                <!--<keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt O"/>-->
+            <!--</action>-->
+            <action id="ExecuteImmediateAction" class="com.pivasyk.ideaPlugin.actions.ExecuteImmediateAction"
+                    text="Paste as EXECUTE IMMEDIATE" description="Paste string as EXECUTE IMMEDIATE">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt P"/>
             </action>
             <add-to-group group-id="EditMenu" anchor="last"/>
         </group>

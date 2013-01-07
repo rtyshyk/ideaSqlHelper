@@ -10,10 +10,11 @@
 ```
 Usage: Edit -> Convert to PHP String (ctrl + alt + shift + L)
 
-2) TODO: Wrap SQL statements to oracle EXECUTE IMMEDIATE statement
+2) Insert string as Oracle EXECUTE IMMEDIATE statement
+Usage: Edit -> Convert to PHP String (ctrl + alt + shift + P)
 
 
 ## INSTALLATION:
 1) Download ``ideaHelpfulPlugins.jar``
 
-2) Install downloaded plugin in phpStorm ``Settings -> Plugins -> Install plugin from hard disk``
+2) Install downloaded plugin in phpStorm ``Settings -> Plugins -> Install plugin from disk``

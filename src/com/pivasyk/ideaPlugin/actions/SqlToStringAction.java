@@ -1,4 +1,4 @@
-package com.pivasyk.ideaPlugin.actions.sqlToPhpString;
+package com.pivasyk.ideaPlugin.actions;
 
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
@@ -35,9 +35,13 @@ public class SqlToStringAction extends AnAction {
 
 
                             ClipboardHelper clipboardHelper = new ClipboardHelper();
-                            String formattedString = clipboardHelper.getClipboard().replaceAll("^", "\"")//start string
-                                    .replaceAll("$", "\";") //end string
-                                    .replaceAll("\n", " \\\\n\".\n\""); //end of each line
+                            String sqlString = clipboardHelper.getClipboard();
+
+                            String formattedString = sqlString
+                                    .trim()
+                                    .replaceAll("^", "\"")//start string
+                                    .replaceAll("\n", " \\\\n\".\n\"") //end of each line
+                                    .replaceAll("$", "\";"); //end string
 
                             int visualLineStartColumn = visualLineStart.getColumn();
                             formattedString = StringHelper.padLeftStringByLine(formattedString, visualLineStartColumn);

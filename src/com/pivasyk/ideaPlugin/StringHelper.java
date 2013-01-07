@@ -18,10 +18,21 @@ public class StringHelper {
     public static String getPlaceholder(String padString, int size) {
 
         StringBuilder builder = new StringBuilder();
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             builder.append(padString);
         }
 
         return builder.toString();
     }
+
+    public static String removeStringOffset(String string){
+
+        StringBuilder sb = new StringBuilder();
+        for (String line : string.split("\n")) {
+            sb.append(line.trim().concat("\n"));
+        }
+
+        return sb.toString();
+    }
+
 }

@@ -1,10 +1,7 @@
 package com.pivasyk.ideaPlugin;
 
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.datatransfer.*;
 import java.io.IOException;
 
 public class ClipboardHelper {
@@ -29,6 +26,12 @@ public class ClipboardHelper {
             }
 
         return null;
+    }
+
+    public void setClipboard(String string){
+        StringSelection stringSelection = new StringSelection(string);
+        Clipboard systemClipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        systemClipboard.setContents(stringSelection, stringSelection);
     }
 
 }
