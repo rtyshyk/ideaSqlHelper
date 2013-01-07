@@ -2,10 +2,11 @@
 
 1) Insert formatted SQL statement as PHP string, like
 ``` php
-    $sql = "SELECT \n".
-    "  HELLO WORLD \n".
-    "FROM \n"
-    "  DUAL\n";
+    $sql =
+        "SELECT \n".
+        "  HELLO WORLD \n".
+        "FROM \n"
+        "  DUAL\n";
 ```
 Usage: Edit -> Convert to PHP String (ctrl + alt + shift + L)
 
