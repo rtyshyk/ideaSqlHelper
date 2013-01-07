@@ -14,5 +14,6 @@ Usage: Edit -> Convert to PHP String (ctrl + alt + shift + L)
 
 
 ## INSTALLATION:
-1 Download ``ideaHelpfulPlugins.jar``
-2 Install plugin in phpStorm ``Settings -> Plugins -> Install plugin from hard disk``
+1) Download ``ideaHelpfulPlugins.jar``
+
+2) Install downloaded plugin in phpStorm ``Settings -> Plugins -> Install plugin from hard disk``
