@@ -11,6 +11,7 @@
 Usage: Edit -> Convert to PHP String (ctrl + alt + shift + L)
 
 2) Insert string as Oracle EXECUTE IMMEDIATE statement
+
 Usage: Edit -> Convert to PHP String (ctrl + alt + shift + P)
 
 
